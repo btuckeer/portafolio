@@ -18,7 +18,7 @@ export class ProductosService {
       return new Promise((resolve, reject) => {
         this.http.get('https://angular-html-b3a90.firebaseio.com/productos_idx.json')
         .subscribe((resp: Producto[]) => {
-          console.log(resp);
+          // console.log(resp);
           this.productos = resp;
           this.cargando = false;
           resolve();
@@ -49,7 +49,7 @@ export class ProductosService {
 
   private filtrarProductos(termino: string) {
 
-    console.log(this.productos);
+    // console.log(this.productos);
     this.productosFiltrado = [];
 
     termino = termino.toLocaleLowerCase();
